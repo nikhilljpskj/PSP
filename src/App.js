@@ -3,8 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import "./index.css"
 import Login from "./routes/Login"
 import Home from "./routes/Home"
-import About from "./routes/About"
-import Project from "./routes/Project"
+
 import PurchaseOrder from "./pages/purchase_order/PurchaseOrder"
 import ManagePo from "./pages/purchase_order/ManagePo"
 import ViewPo from "./pages/purchase_order/ViewPo"
@@ -44,8 +43,7 @@ return (
 <Routes>
 <Route path="/" element={<Login />} />
 <Route path="/home" element={<Home />} />
-<Route path="/project" element={<Project />} />
-<Route path="/about" element={<About />} />
+
 <Route path="/purchase_order" element={<PurchaseOrder />} />
 <Route path="/purchase_order/manage_po" element={<ManagePo />} />
 <Route path="/purchase_order/view_po" element={<ViewPo />} />
