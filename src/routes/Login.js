@@ -36,11 +36,11 @@ const Login = () => {
           <label htmlFor="password">Password:</label>
           <input type="password" id="password" value={password} onChange={handlePasswordChange} />
         </div>
-        <div className="button-group">
+        <div className="buttons-row">
           <Link to="/home" className="login-btn" onClick={handleLogin}>
             Login
           </Link>
-          <Link to="/manage_user" className="login-btn" onClick={handleCreateAccount}>
+          <Link to="/user/manage_user" className="login-btn" onClick={handleCreateAccount}>
             Create Account
           </Link>
         </div>
