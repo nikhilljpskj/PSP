@@ -37,6 +37,7 @@ import UserList from "./pages/user/UserList";
 import ManageUser from "./pages/user/ManageUser"
 import UserProfile from "./pages/user/UserProfile"
 import Settings from "./pages/account-settings/Settings"
+import LogoutPage from  "./pages/exit/LogoutPage"
 function App() {
 return (
 <>
@@ -81,6 +82,7 @@ return (
 <Route path="/user/manage_user" element={<ManageUser />} />
 <Route path="/profile" element={<UserProfile />} />
 <Route path="/settings" element={<Settings />} />
+<Route path="/log" element={<LogoutPage />} />
 </Routes>
 </>
 );
