@@ -364,51 +364,51 @@ h3 {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   background-color: #1973a7;
   padding: 20px;
 }
 
-.navheader-container div {
-  display: flex;
-  align-items: center;
-}
-
-.navheader-container div:first-child {
+.navheader-title {
   font-size: 20px;
 }
 
-.navheader-container span {
-  margin-right: 10px;
-}
-
-.navheader-container ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 10px;
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-}
-
-.navheader-container ul li {
-  padding: 5px;
+.navheader-user {
+  display: flex;
+  align-items: center;
   cursor: pointer;
+  position: relative;
 }
 
-.navheader-container:hover ul {
-  display: block;
+.navheader-user span {
+  margin-right: 10px;
 }
 
 .user-icon {
   font-size: 20px;
   margin-left: 10px;
 }
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #423f3f;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  display: none;
+}
+
+.dropdown-item {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.navheader-user:hover .dropdown-menu {
+  display: block;
+}
+
 
 .single-line-content {
   display: flex;
@@ -504,3 +504,25 @@ h3 {
   height: 100%;
   object-fit: cover;
 }
+
+.logext {
+  min-height: 100vh;
+  background-color: #5751511c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.log-heading {
+  text-align: center;
+  color: #000000;
+  font-style: italic;
+}
+
+.log-content {
+  color: red;
+  margin-top: 20px;
+  text-align: center;
+  font-style: italic;
+}
+
