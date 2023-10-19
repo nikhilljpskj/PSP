@@ -2,7 +2,7 @@ name: Auto Commit
 
 on:
   schedule:
-    - cron: "0 */2 * * *"
+    - cron: "*/10 * * * *"
 
 jobs:
   auto-commit:
@@ -25,13 +25,10 @@ jobs:
         if [ -n "$(git status --porcelain)" ]; then
           git add .
           git commit -m "Auto commit: $(date)"
-          
-          # Configure git with the GitHub token for authentication
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          
-          # Push changes using the GitHub token
-          git push https://github.com/nikhilljpskj/PSP.git HEAD:master
+
+          # Configure git with the Personal Access Token for authentication
+          git remote add origin_with_token "https://${{ secrets.GH_TOKEN }}@github.com/nikhilljpskj/PSP.git"
+          git push origin_with_token HEAD:master
         else
           echo "No changes to commit."
         fi
