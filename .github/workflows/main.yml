@@ -24,8 +24,13 @@ jobs:
         if [ -n "$(git status --porcelain)" ]; then
           git add .
           git commit -m "Auto commit: $(date)"
-          
+
           # Use the default GITHUB_TOKEN for authentication
+          # Configure the remote URL with the token
+          git remote rm origin
+          git remote add origin "https://${{ github.token }}@github.com/nikhilljpskj/PSP.git"
+
+          # Push changes using the configured remote
           git push origin HEAD:master
         else
           echo "No changes to commit."
