@@ -26,7 +26,7 @@ jobs:
           git commit -m "Auto commit: $(date)"
 
           # Use the default GITHUB_TOKEN for authentication
-          git push origin HEAD:master
+          git push origin HEAD:main
         else
           echo "No changes to commit."
         fi
